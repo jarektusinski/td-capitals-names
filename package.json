@@ -1,9 +1,16 @@
 {
   "name": "td-capitals-names",
   "version": "1.0.0",
-  "description": "",
+  "description": "Typed collection of country and territory capital names in English and native-language forms for TypeScript projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "prepublishOnly": "npm run build",
@@ -13,7 +20,16 @@
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\""
   },
-  "keywords": [],
+  "keywords": [
+    "countries",
+    "capitals",
+    "geography",
+    "location",
+    "typescript",
+    "country-data",
+    "cities",
+    "localization"
+  ],
   "author": "Jarosław Tusiński",
   "license": "MIT",
   "repository": {
